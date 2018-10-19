@@ -5,38 +5,43 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+-->
     </head>
 
-    <body>
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">My scratchpad</a>
-        </div>
-    </div>
-</nav>
+    <body   style = "position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id1,id2) {
+       var e = document.getElementById(id1);
+       var b = document.getElementById(id2);
+       e.style.display = 'block';
+       b.style.display = 'none';
+
+    }
+//-->
+</script>
+<!--        <a href="#" onclick="toggle_visibility('foo','bar');">Click here to toggle visibility of elements #foo and #bar</a>
+-->
+<p>
+  <span id="foo" style="display:none">{{back}}</span>
+  <span id="bar">{{front}}</span>
+</p>
 
 
-<div class="container">
+<button onclick="toggle_visibility('foo','bar')">reveal answer</button>
+<button onclick="myFunction()">new question</button>
 
 
-{% for comment in comments %}
-    <div class="row">
-        {{ comment }}
-    </div>
-{% endfor %}
-            <form action="." method="POST">
-                <textarea name="contents" placeholder="Enter a comment"></textarea>
-                <input type="submit" class="btn btn-success" value="Post comment">
-            </form>
-        </div>
-</div><!-- /.container -->
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+
     </body>
 </html>
