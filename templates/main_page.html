@@ -9,12 +9,16 @@
 -->
     </head>
 
-    <body   style = "position: fixed;
+    <body style = "position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);">
+  transform: translate(-50%, -50%);
+  width: 90%;
+  font-size: 24px;
+  text-align: center;">
+
 <script type="text/javascript">
-<!--
+
     function toggle_visibility(id1,id2) {
        var e = document.getElementById(id1);
        var b = document.getElementById(id2);
@@ -32,8 +36,10 @@
 </p>
 
 
-<button onclick="toggle_visibility('foo','bar')">reveal answer</button>
-<button onclick="myFunction()">new question</button>
+<button style="font-size:20px" onclick="toggle_visibility('foo','bar')">reveal answer</button>
+<br>
+<br>
+<button style="font-size:20px" onclick="myFunction()">new question</button>
 
 
 
